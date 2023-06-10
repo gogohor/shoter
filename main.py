@@ -22,7 +22,8 @@ btn_level4 = Button(20,260,70,70,'level4.png')
 
 player1 = Player('hero.png', 495,420,10)
 player = Player('hero.png', 0, 320,10)
-player2 = Player('hero.png', 80, 440,10)
+player2 = Player('hero.png', 30, 350,10)
+player3 = Player('hero.png', 5, 230,10)
 
 final = Player('gold.png', 630,140, 0)
 
@@ -41,6 +42,19 @@ level3_pula3 = Enemy('pula.png',500,420,9.5)
 final4 = Player('gold.png', 560,10,0)
 final5 = Player('button.png', 30,20,0)
 final6 = Player('button.png', 30,230,0)
+
+button = Player("Button.png",30,330,4)
+button2 = Player("Button.png",30,410,4)
+button3 = Player("Button.png",30,150,4)
+button4 = Player("Button.png",610,30,4)
+final8 = Player('gold.png', 620,230,10)
+level4_pula = Enemy('pula.png',30,30,12.5)
+level4_pula2 = Enemy('pula.png',500,420,9.5)
+level4_pula3 = Enemy('pula.png',120,180,9.5)
+b = False
+b2 = False
+b3 = False
+b4 = False
 
 
 walls_level1 = []
@@ -136,7 +150,7 @@ walls_level3 = []
 wall1_level3 = Wall1((2,4,55), 10,10,540,10)
 wall2_level3 = Wall1((2,4,55), 10,10,10,470)
 wall3_level3 = Wall1((2,4,55), 150,480,500,10)
-wall4_level3 = Wall1((2,4,55), 10,480,50,10)
+wall4_level3 = Wall1((2,4,55), 10,480,150,10)
 wall5_level3 = Wall1((2,4,55), 630,10,50,10)
 wall6_level3 = Wall1((2,4,55), 680,10,10,470)
 wall7_level3 = Wall1((2,4,55), 10,300,90,10)
@@ -152,7 +166,6 @@ wall16_level3 = Wall1((2,4,55), 520,100,10,80)
 wall17_level3 = Wall1((2,4,55), 280,180,130,10)
 wall18_level3 = Wall1((2,4,55), 280,180,10,150)
 wall19_level3 = Wall1((2,4,55), 100,100,190,10)
-
 wall20_level3 = Wall1((2,4,55), 480,10,10,100)
 wall21_level3 = Wall1((2,4,55), 290,100,190,10)
 
@@ -179,7 +192,69 @@ walls_level3.append(wall19_level3)
 walls_level4 = []
 
 
+wall1_level4 = Wall1((2,4,55), 10,10,680,10)
+wall2_level4 = Wall1((2,4,55), 10,10,10,200)
+wall3_level4 = Wall1((2,4,55), 10,300,10,190)
+wall4_level4 = Wall1((2,4,55), 10,10,10,220)
+wall5_level4 = Wall1((2,4,55), 10,480,680,10)
+wall6_level4 = Wall1((2,4,55), 680,10,10,220)
+wall7_level4 = Wall1((2,4,55), 680,300,10,190)
+wall8_level4 = Wall1((2,4,55), 10,300,100,10)
+wall9_level4 = Wall1((2,4,55), 10,220,100,10)
+wall10_level4 = Wall1((2,4,55), 100,120,10,100)
+wall11_level4 = Wall1((2,4,55), 190,120,100,10)
+wall12_level4 = Wall1((2,4,55), 190,120,10,190)
+wall13_level4 = Wall1((2,4,55), 280,120,10,100)
+wall14_level4 = Wall1((2,4,55), 190,300,100,10)
+wall15_level4 = Wall1((2,4,55), 290,300,10,100)
+wall16_level4 = Wall1((2,4,55), 280,220,100,10)
+wall17_level4 = Wall1((2,4,55), 380,10,10,120)
+wall18_level4 = Wall1((2,4,55), 480,100,200,10)
+wall19_level4 = Wall1((2,4,55), 10,400,290,10)
+wall20_level4 = Wall1((2,4,55), 600,180,10,50)
+wall21_level4 = Wall1((2,4,55), 600,300,80,10)
+wall22_level4 = Wall1((2,4,55), 600,220,80,10)
+wall23_level4 = Wall1((2,4,55), 480,100,10,220)
+wall24_level4 = Wall1((2,4,55), 410,320,80,10)
+wall25_level4 = Wall1((2,4,55), 400,320,10,90)
+wall26_level4 = Wall1((2,4,55), 410,320,80,10)
+wall27_level4 = Wall1((2,4,55), 400,400,170,10)
 
+
+wall28_level4 = Wall1((2,4,55), 600,220,10,90)
+wall29_level4 = Wall1((2,4,55), 510,400,170,10)
+
+
+
+
+
+walls_level4.append(wall1_level4)
+walls_level4.append(wall2_level4)
+walls_level4.append(wall3_level4)
+walls_level4.append(wall4_level4)
+walls_level4.append(wall5_level4)
+walls_level4.append(wall6_level4)
+walls_level4.append(wall7_level4)
+walls_level4.append(wall8_level4)
+walls_level4.append(wall9_level4)
+walls_level4.append(wall10_level4)
+walls_level4.append(wall11_level4)
+walls_level4.append(wall12_level4)
+walls_level4.append(wall13_level4)
+walls_level4.append(wall14_level4)
+walls_level4.append(wall15_level4)
+walls_level4.append(wall16_level4)
+walls_level4.append(wall17_level4)
+walls_level4.append(wall18_level4)
+walls_level4.append(wall19_level4)
+walls_level4.append(wall20_level4)
+walls_level4.append(wall21_level4)
+walls_level4.append(wall22_level4)
+walls_level4.append(wall23_level4)
+walls_level4.append(wall24_level4)
+walls_level4.append(wall25_level4)
+walls_level4.append(wall26_level4)
+walls_level4.append(wall27_level4)
 
 
 
@@ -190,7 +265,7 @@ lose = font.render('YOU LOSE',True,(255,255,255))
 
 
 
-level5 = False
+
 level4 = False
 level3 = False
 level2 = False
@@ -223,10 +298,13 @@ while game:
         if btn_level3.draw(window):
             level3 = True
 
+        if btn_level4.draw(window):
+            level4 = True
+
 
         if level1 == "go":
-            player2.rect.x = 80
-            player2.rect.y = 440
+            player2.rect.x = 30
+            player2.rect.y = 350
             player1.rect.x = 420
             player1.rect.y = 495
             
@@ -280,8 +358,8 @@ while game:
         if level2:  
             player.rect.x = 10
             player.rect.y = 320
-            player2.rect.x = 80
-            player2.rect.y = 440
+            player2.rect.x = 30
+            player2.rect.y = 350
             window.blit(background,(0,0))
             final2.draw(window)
             final3.draw(window)
@@ -302,12 +380,14 @@ while game:
             if sprite.collide_rect(player1,level2_pula):
                 player1.rect.y = 420
                 player1.rect.x = 495
+                final3.rect.x = 25
                 wall18_level2.rect.x = 250
                 window.blit(lose,(200,200))
 
 
             if sprite.collide_rect(player1,final3):
                 wall18_level2.rect.x = 800
+                final3.rect.x = 800
 
             if sprite.collide_rect(player1,final2):
                     window.blit(win,(200,200))
@@ -366,8 +446,8 @@ while game:
                         player2.rect.bottom = wall.rect.top
 
             if player2.rect.y <= 0 or player2.rect.y >= 480:
-                player2.rect.x = 80
-                player2.rect.y = 440
+                player2.rect.x = 30 
+                player2.rect.y = 350
 
             if btn_exit1.draw(window):
                 run = "payza"
@@ -376,25 +456,121 @@ while game:
                 player2.rect.y = 440
 
             if sprite.collide_rect(player2,level3_pula1) or sprite.collide_rect(player2,level3_pula2) or sprite.collide_rect(player2,level3_pula3):
-                player2.rect.y = 440
-                player2.rect.x = 80
+                player2.rect.y = 350
+                player2.rect.x = 30
                 wall20_level3.rect.x = 480
                 wall21_level3.rect.x = 290
                 window.blit(lose,(200,200))
                 wall7_level3.rect.x = 10
+                final5.rect.x = 30
+                final6.rect.x = 30
+
 
             if sprite.collide_rect(player2,final5):
                 wall20_level3.rect.x = 800
                 wall7_level3.rect.x = 800
+                final5.rect.x = 800
 
             if sprite.collide_rect(player2,final6):
                 wall21_level3.rect.x = 800
+                final6.rect.x = 800
 
             if sprite.collide_rect(player2,final4):
-                    window.blit(win,(200,200))
+                window.blit(win,(200,200))
             
             
+        if level4:
+            player.rect.x = 10
+            player.rect.y = 320
+            player1.rect.x = 420
+            player1.rect.y = 495
+            player2.rect.y = 350
+            player2.rect.x = 30
+            window.blit(background,(0,0))
+            button.draw(window)
+            button2.draw(window)
+            button3.draw(window)
+            button4.draw(window)
+            player3.draw(window)
+            player3.move()
+            wall29_level4.draw(window)
+            wall28_level4.draw(window)
+            final8.draw(window)
+            level4_pula.draw(window)  
+            level4_pula2.draw(window)  
+            level4_pula3.draw(window) 
+            level4_pula.move_left_right(30, 310) 
+            level4_pula2.move_left_right(30, 680) 
+            level4_pula3.move_up_down(20,330)
+
+            for wall in walls_level4:
+
+                if player3.rect.colliderect(wall.rect):
+                    if player3.dir2 == "left":
+                        player3.rect.left = wall.rect.right
+                    if player3.dir2 == "right":
+                        player3.rect.right = wall.rect.left
+                    if player3.dir2 == "up":
+                        player3.rect.top = wall.rect.bottom
+                    if player3.dir2 == "down":
+                        player3.rect.bottom = wall.rect.top
+
+
+            for wall in walls_level4:
+                wall.draw(window)
+
+
+            if player3.rect.y <= 0 or player3.rect.y >= 480:
+                player3.rect.x = 5 
+                player3.rect.y = 230
+
+            if btn_exit1.draw(window):
+                level4 = False
+                run = "payza"
+                player3.rect.x = 5
+                player3.rect.y = 230
+
+            if sprite.collide_rect(player3,button):
+                b = True
+                button.rect.x = 800
             
+            if sprite.collide_rect(player3,button2):
+                b2 = True
+                button2.rect.x = 800
+
+            if sprite.collide_rect(player3,button3):
+                b3 = True
+                button3.rect.x = 800
+                
+            if sprite.collide_rect(player3,button4):
+                wall29_level4.rect.x = 800
+                button4.rect.x = 800
+                b4 = True
+
+            if b == True and b2 == True and b3 == True and b4 == True:
+                wall28_level4.rect.x = 800
+
+            if sprite.collide_rect(player3,final8):
+                window.blit(win,(200,200))
+            
+            if sprite.collide_rect(player3,level4_pula) or sprite.collide_rect(player3,level4_pula2) or sprite.collide_rect(player3,level4_pula3):
+                window.blit(lose,(200,200))
+                player.rect.x = 5
+                player.rect.y = 230
+
+                wall29_level4.rect.x = 510
+                button4.rect.x = 610
+                wall28_level4.rect.x = 600
+                button3.rect.x = 30
+                button2.rect.x = 30
+                button.rect.x = 30
+
+                b = False
+                b2 = False
+                b3 = False
+                b4 = False
+
+                
 
     if run == "payza":
         if btn_start.draw(window):
