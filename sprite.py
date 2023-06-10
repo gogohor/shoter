@@ -9,30 +9,32 @@ class GameSprite(sprite.Sprite):
         self.rect.x = x
         self.rect.y = y
         self.dir2 = "right"
-       
     
-
-
     def draw(self,window):
         window.blit(self.image,(self.rect.x,self.rect.y))
 
 
 
 class Player(GameSprite):
+    def move(self):
+        keys = key.get_pressed()
         if keys[K_a] and self.rect.x > 5:
             self.dir2 = "left"
             self.speed = 10
             self.rect.x -= self.speed
             self.image = transform.scale(image.load("hero1.png"),(65,65))
+
         if keys[K_d] and self.rect.x < 640:
             self.dir2 = "right"
             self.speed = 10
             self.rect.x += self.speed
             self.image = transform.scale(image.load("hero.png"),(65,65))
+
         if keys[K_w] and self.rect.y > 5:
             self.dir2 = "up"
             self.speed = 10
             self.rect.y -= self.speed
+
         if keys[K_s] and self.rect.y <  430:
             self.dir2 = "down"
             self.speed = 10

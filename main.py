@@ -25,16 +25,22 @@ player = Player('hero.png', 0, 320,10)
 player2 = Player('hero.png', 80, 440,10)
 
 final = Player('gold.png', 630,140, 0)
+
+
 final2 = Player('gold.png', 30,10, 0)
-final1 = Player('button.png', 25,415, 0)
+final3 = Player('button.png', 25,415, 0)
+
 level1_pula = Enemy('pula.png',30,20,12.5)
 level2_pula = Enemy('pula.png',300,180,12.5)
 
 level3_pula1 = Enemy('pula.png',120,20,12.5)
 level3_pula2 = Enemy('pula.png',30,20,2)
 level3_pula3 = Enemy('pula.png',500,420,9.5)
-final2 = Player('button.png', 30,20,0)
-final3 = Player('button.png', 30,230,0)
+
+
+final4 = Player('gold.png', 560,10,0)
+final5 = Player('button.png', 30,20,0)
+final6 = Player('button.png', 30,230,0)
 
 
 walls_level1 = []
@@ -278,15 +284,15 @@ while game:
             player2.rect.y = 440
             window.blit(background,(0,0))
             final2.draw(window)
+            final3.draw(window)
             player1.draw(window)
             player1.move()
-            final1.draw(window)
             level2_pula.draw(window)   
             level2_pula.move_left_right(20,600)
             wall18_level2.draw(window)  
 
 
-            if player1.rect.y <= 0 or player1.rect.y >= 480:
+            if player1.rect.y < 0 or player1.rect.y >= 480:
                 player1.rect.x = 495
                 player1.rect.y = 420
             
@@ -300,15 +306,12 @@ while game:
                 window.blit(lose,(200,200))
 
 
-            if sprite.collide_rect(player1,final1):
+            if sprite.collide_rect(player1,final3):
                 wall18_level2.rect.x = 800
-                
-                    
 
-            if sprite.collide_rect(player,final2):
+            if sprite.collide_rect(player1,final2):
                     window.blit(win,(200,200))
-
-
+                
             for wall in walls_level2:
 
                 if player1.rect.colliderect(wall.rect):
@@ -333,8 +336,9 @@ while game:
             player1.rect.x = 420
             player1.rect.y = 495
             window.blit(background,(0,0))
-            final2.draw(window)
-            final3.draw(window)
+            final5.draw(window)
+            final6.draw(window)
+            final4.draw(window)           
             player2.draw(window)
             player2.move()
             level3_pula1.draw(window)   
@@ -379,18 +383,18 @@ while game:
                 window.blit(lose,(200,200))
                 wall7_level3.rect.x = 10
 
-            if sprite.collide_rect(player2,final2):
+            if sprite.collide_rect(player2,final5):
                 wall20_level3.rect.x = 800
                 wall7_level3.rect.x = 800
-            if sprite.collide_rect(player2,final3):
+
+            if sprite.collide_rect(player2,final6):
                 wall21_level3.rect.x = 800
 
+            if sprite.collide_rect(player2,final4):
+                    window.blit(win,(200,200))
             
-
-                
-                
-
-
+            
+            
 
     if run == "payza":
         if btn_start.draw(window):
